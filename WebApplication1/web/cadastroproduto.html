@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .container{
+                width: 60%;
+                background-color: silver;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 10px;
+                padding: 30px;
+            }
+            input[type=text]{
+              width: 100%; 
+              padding: 10px;
+              margin-bottom: 10px;
+              border-radius: 10px;
+            }
+            
+            input[type=button],input[type=reset]{
+                width: 30%;
+                border-radius: 150px;
+                padding: 10px;
+                color: red;
+                
+            } 
+            
+            input[type=reset]{
+                float: right;
+            }
+            
+        </style>
+    
+    </head>
+    <body>
+        <h1>Cadastro de produto</h1>
+        <div class="container">
+            <form action="">
+                <label for="descricao">Informe descrição</label>
+                <input type="text" id="descricao" />
+                <label for="preco">Informe preço</label>
+                <input type="text" id="preco" />
+                <label for="quantidade">Informe quantidade</label>
+                <input type="text" id="quantidade" />
+                
+                <input type="button" value="Gravar" />
+                <input type="reset" value="Cancelar" />
+                
+            </form>
+        </div>
+    </body>
+</html>
