@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table{
+               width: 60%;               
+               margin-left: auto;
+               margin-right: auto;
+            }
+            
+            table, tr, td{
+                border: red solid 1px;
+            }
+            
+            table tr:nth-child(even){
+                background-color: yellow;
+            }
+            
+            thead{
+                background-color: green;
+                color: white;               
+            }          
+           
+            .pseudo{
+              background-color: red;
+              color: white;
+              padding: 10px;              
+            } 
+            
+            .pseudo:hover{
+                background-color: blue;
+                color: red;
+            }
+            
+            table tbody tr:hover {background-color: blue;}
+        </style>
+    </head>
+    <body>
+        <button class="pseudo">Ola pessoal</button>
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Xpto</td>
+                        <td>José da Silva</td>
+                        <td>Brazil</td>
+                    </tr>                    
+                    <tr>
+                        <td>Ypto</td>
+                        <td>João da Silva</td>
+                        <td>Brazil</td>
+                    </tr>
+                    <tr>
+                        <td>Zpto</td>
+                        <td>Antonio da Silva</td>
+                        <td>Brazil</td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+    </body>
+</html>
