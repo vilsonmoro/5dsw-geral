@@ -9,29 +9,38 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <style>
             *{box-sizing: border-box}
-            
+
             .lista{
-               background-color: red; 
-               padding: 30px;               
+                display: inline-block;
+                background-color: red; 
+                padding: 30px;               
             }
-            
+
             .lista li{
                 display: inline;
                 background-color: white;
                 padding: 10px;
                 border-radius: 50%;
             }
-            
+
             .sublista{
                 display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 100px;                
+                z-index: 1;
             }
             
-            #expande-sublista:hover .sublista{
+            .sublista ul li{
                 display: block;
-                z-index: 10;
+                text-align: left;
+            }
+
+            .expande-sublista:hover .sublista{
+                display: block;               
             }
         </style>
     </head>
@@ -39,13 +48,14 @@ and open the template in the editor.
         <div>
             <ul class="lista">
                 <li>Home</li>
-                <li> <span id="expande-sublista"> Cadastro </span>
+                <li class="expande-sublista"> 
+                    Cadastro
                     <div class="sublista">
                         <ul>
                             <li>Produtos</li>
                             <li>Categorias</li>
                             <li>Usuários</li>
-                       </ul>
+                        </ul>
                     </div>
                 </li>
                 <li>Consulta</li>
