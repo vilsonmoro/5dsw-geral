@@ -1,0 +1,127 @@
+<html>
+
+<head>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;       
+        }
+
+        .sidemenu {
+            width: 12%;
+            height: 100%;
+            background-color: silver;
+            float: left;
+            left: -20px;
+        }
+
+        iframe {
+            width: 88%;
+            float: right;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-left: -35px;
+            background-color: skyblue;
+            margin-top: 5px;
+            width: 130px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        
+        li:hover {
+            color: tomato;
+            background-color: teal;
+        }
+
+        .cabecalho {
+            width: 100%;
+            background-color: cadetblue;
+            padding: 10px;
+        }
+
+        .titulo {
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 300px;
+        }
+
+        .login {
+            width: 80px;
+            background-color: skyblue;
+            float: right;
+            text-align: center;
+            border-radius: 10px;
+            padding-bottom: 5px;
+        }
+
+        .submenu {
+            display: none;
+        }
+
+        .submenu ul li a {
+            margin-left: -35px;
+            background-color: skyblue;
+            margin-top: 5px;            
+        }
+
+        .item-menu a{
+            background-color: tomato;  
+            padding: 5px; 
+            border-radius: 15px;         
+        }
+
+        .item-menu{
+            margin: 10px;            
+        }
+
+        .item-menu:hover .submenu {
+            display: block;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cabecalho">
+        <span>Logo</span>
+        <label class="titulo">Sistema de Gerenciamento</label>
+        <a href="g" class="login"> Login</a>
+    </div>
+    <div class="sidemenu">        
+        <div class="item-menu">
+            <a href="">Cadastro</a>
+            <ul class="submenu">
+                <li>Cliente</li>
+                <li>Equipamento</li>
+                <li>Ordens</li>
+            </ul>
+        </div>
+
+        
+        <div class="item-menu">
+            <a href="">Consulta</a>
+            <ul class="submenu">
+                <li>Cliente</li>
+                <li>Equipamento</li>
+                <li>Ordens</li>
+            </ul>
+        </div>
+    </div>
+
+    <iframe src="" name="meuframe"></iframe>
+</body>
+
+</html>
