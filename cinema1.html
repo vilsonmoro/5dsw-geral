@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            input[type=button]{
+                width: 50px;
+                margin-bottom: 5px;
+                color: white;
+            }
+
+            .livre{                
+                background-color: green;
+            }
+
+            .ocupado{
+                background-color: red;
+            }
+
+            #sala{
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 500px;
+                padding: 20px;
+                border: red solid 1px;
+            }
+            .resultado{
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 500px;
+                padding: 20px;
+                border: red solid 1px;                
+            }
+            
+            span{
+              color: red;
+              font-weight: bold;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div>
+            <label>Informe quantas cadeiras</label>
+            <input type="number" id="qtdeCadeiras" />
+            <button onclick="montarSala()">Criar</button>            
+        </div>
+        <div id="sala">
+
+        </div>
+        <div class="resultado">
+            <label style="float: left">Total cadeiras: <span id="totalLivres"></span></label>
+            <label style="float: right">Cadeiras Ocupadas: <span id="totalOcupadas"></span></label>
+        </div>
+
+        <script>
+            function livresOcupados() {
+                debugger;
+                var livres = document.getElementsByClassName("livre");
+                document.getElementById("totalLivres").innerHTML = livres.length;
+
+                var ocupados = document.getElementsByClassName("ocupado");
+                document.getElementById("totalOcupadas").innerHTML = ocupados.length;
+            }
+
+            function reservar(cadeira) {
+                var x = cadeira.getAttribute("class");
+                if (x === "livre") {
+                    cadeira.setAttribute("class", "ocupado");
+                } else {
+                    cadeira.setAttribute("class", "livre");
+                }
+                livresOcupados();
+            }
+
+            function montarSala() {
+                debugger;
+                var sala = document.getElementById("sala");
+                var qtde = document.getElementById("qtdeCadeiras").value;
+                for (i = 1; i <= qtde; i++) {
+                    var bt = document.createElement("input");
+                    bt.setAttribute("type", "button");
+                    bt.setAttribute("value", "C" + i);
+                    bt.setAttribute("class", "livre");
+                    bt.setAttribute("onclick", "reservar(this)");
+                    sala.appendChild(bt);
+                }
+                livresOcupados();
+            }
+        </script>
+    </body>
+</html>
